@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+</head>
+<body>
+    <h1>Play Pig Dice!</h1>
+    <h3>Click the dice to start the game!</h3>
+    <h3>If you roll a 1 you lose all points for that round, or press the hold button to save your points and end your turn</h3>
+    <div id="playerOne">
+        <h1>Player 1's Turn!</h1>
+        <form id="playerOneForm">
+            <button id="playerOneDice" type="submit" class="dice"></button>
+        </form>
+        <h3>You rolled a <span class="rollOutput"></span></h3>
+        <h3>Your point total for this round is <span class="roundPointOutput"></span></h3>
+        <button class="hold" id="playerOneHold">Hold!</button>
+    </div>
+    <div id="playerTwo">
+        <h1>Player 2's Turn!</h1>
+        <form id="playerTwoForm">
+            <button id="playerTwoDice" type="submit" class="dice"></button>
+        </form>
+        <h3>You rolled a <span class="rollOutput"></span></h3>
+        <h3>Your point total for this round is <span class="roundPointOutput"></span></h3>
+        <button class="hold" id="playerTwoHold">Hold!</button>
+    </div>
+</body>
+</html>

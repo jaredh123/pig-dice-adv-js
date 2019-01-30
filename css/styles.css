@@ -1,0 +1,24 @@
+.dice {
+    height: 200px;
+    width: 200px;
+    background-color: dodgerblue;
+}
+
+.hold {
+    height: 50px;
+    width: 100px;
+    background-color: darkseagreen;
+    border-radius: 7%;
+} 
+
+#playerTwo {
+    display: none;
+}
+
+#playerTwoDice {
+    background-color: blueviolet;
+}
+
+body {
+    text-align: center
+} 
