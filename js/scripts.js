@@ -15,33 +15,15 @@ Player.prototype.pointLogic = function(roll) {
     } else {
         alert(`You have rolled a ${roll}!`);
         this.roundPoints = 0;
-        $("#playerTwo").show();
-        $("#playerOne").hide();
-    }
-}
-
-Player.prototype.pointLogic2 = function(roll) {
-    if (roll != 1) {
-        this.currentNumber = roll;
-        this.roundPoints += roll;
-    } else {
-        alert(`You have rolled a ${roll}!`);
-        this.roundPoints = 0;
-        $("#playerTwo").hide();
-        $("#playerOne").show();
+        $("#playerTwo").toggle();
+        $("#playerOne").toggle();
     }
 }
 
 Player.prototype.addToPoints = function() {
     this.points += this.roundPoints;
-    $("#playerTwo").show();
-    $("#playerOne").hide();
-}
-
-Player.prototype.addToPoints2 = function() {
-    this.points += this.roundPoints;
-    $("#playerTwo").hide();
-    $("#playerOne").show();
+    $("#playerTwo").toggle();
+    $("#playerOne").toggle();
 }
 
 var diceRoll = function () {
@@ -70,7 +52,7 @@ $(document).ready(function() {
     $("form#playerTwoForm").submit(function(event) {
         event.preventDefault();
         var num = diceRoll();
-        player2.pointLogic2(num);
+        player2.pointLogic(num);
         $(".rollOutput").text(player2.currentNumber);
         $(".roundPointOutput").text(player2.roundPoints);
         console.log(player2.roundPoints);
@@ -78,7 +60,7 @@ $(document).ready(function() {
 
     $("#playerTwoHold").click(function(event) {
         event.preventDefault();
-        player2.addToPoints2();
+        player2.addToPoints();
         console.log(player2.points);
     });
 
