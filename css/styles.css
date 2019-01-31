@@ -1,13 +1,16 @@
 .dice {
     height: 200px;
     width: 200px;
-    background-color: dodgerblue;
+}
+
+.dice:hover {
+    cursor: pointer;
 }
 
 .hold {
     height: 50px;
     width: 100px;
-    background-color: darkseagreen;
+    background-color: #F0C4DB;
     border-radius: 7%;
 } 
 
@@ -15,10 +18,37 @@
     display: none;
 }
 
-#playerTwoDice {
-    background-color: blueviolet;
+body {
+    text-align: center;
+    background-image: url("../img/pig2.jpg");
+    color: #90245D;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
 }
 
-body {
-    text-align: center
-} 
+.big {
+    font-size: 65px;
+}
+
+.bigish {
+    font-size: 60px;
+}
+
+h3 {
+    font-family: Helvetica;
+}
+
+#playerOneDice, #playerTwoDice {
+    width: 250px;
+    height: 250px;
+}
