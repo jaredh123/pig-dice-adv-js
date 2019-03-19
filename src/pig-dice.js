@@ -32,6 +32,9 @@ Player.prototype.diceRoll = function () {
 Player.prototype.checkForWin = function () {
   if (this.points >= 100) {
     alert("You've reached 100 points " + this.name + ", YOU WON!!");
+    return true;
+  } else {
+    return false;
   }
 };
 
