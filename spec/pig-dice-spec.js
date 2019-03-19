@@ -2,6 +2,11 @@ import { Player } from "../src/pig-dice.js";
 
 describe('Player', function() {
 
+  it('should test for name', function() {
+    var player = new Player("tanTheMan", 1, 2, 3);
+    expect(player.name).toEqual("tanTheMan");
+  });
+
   it('should test for points', function() {
     var player = new Player("tanTheMan", 1, 2, 3);
     expect(player.points).toEqual(1);
